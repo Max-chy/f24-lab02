@@ -1,9 +1,12 @@
-function circle(radius: number): Shape {
-    return {
-        radius,
-        computeArea: function (): number {
-            return Math.PI * radius * radius
-        }
+class circle implements Shape {
+    #radius: number;
+    
+    constructor(radius: number) {
+        this.#radius = radius;
+    }
+
+    public computeArea(): number {
+        return Math.PI * this.#radius * this.#radius;
     }
 }
 
