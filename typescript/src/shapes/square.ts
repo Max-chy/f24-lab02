@@ -1,12 +1,12 @@
 class square implements Shape {
-    private sideLen: number;
+    #sideLen: number;
     
     constructor(sideLen: number) {
-        this.sideLen = sideLen;
+        this.#sideLen = sideLen;
     }
 
     public computeArea(): number {
-        return this.sideLen * this.sideLen;
+        return this.#sideLen * this.#sideLen;
     }
 }
 
